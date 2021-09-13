@@ -31,9 +31,13 @@
 		D9BE950826F00311004629F3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE950726F00311004629F3 /* Validation.swift */; };
 		D9BE950B26F00320004629F3 /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE950A26F00320004629F3 /* UIView+Extentions.swift */; };
 		D9BE950E26F0032B004629F3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE950D26F0032B004629F3 /* Extentions.swift */; };
+		F8B69862CE4F00850B12D347 /* Pods_TaskAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693D2736EAD8DE0477A7A190 /* Pods_TaskAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693D2736EAD8DE0477A7A190 /* Pods_TaskAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B0A8F3A0EEA7C736D49675D /* Pods-TaskAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskAuth.debug.xcconfig"; path = "Target Support Files/Pods-TaskAuth/Pods-TaskAuth.debug.xcconfig"; sourceTree = "<group>"; };
+		6C9B7B1528A1D71F8AE8C9BC /* Pods-TaskAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskAuth.release.xcconfig"; path = "Target Support Files/Pods-TaskAuth/Pods-TaskAuth.release.xcconfig"; sourceTree = "<group>"; };
 		D9BE94BB26F000A4004629F3 /* TaskAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BE94BE26F000A4004629F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9BE94C026F000A4004629F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,17 +71,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B69862CE4F00850B12D347 /* Pods_TaskAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426BBC4B5C1864C7069AEA30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				693D2736EAD8DE0477A7A190 /* Pods_TaskAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CAF465D6B822C4EF1B3A593 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B0A8F3A0EEA7C736D49675D /* Pods-TaskAuth.debug.xcconfig */,
+				6C9B7B1528A1D71F8AE8C9BC /* Pods-TaskAuth.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D9BE94B226F000A3004629F3 = {
 			isa = PBXGroup;
 			children = (
 				D9BE94BD26F000A4004629F3 /* TaskAuth */,
 				D9BE94BC26F000A4004629F3 /* Products */,
+				4CAF465D6B822C4EF1B3A593 /* Pods */,
+				426BBC4B5C1864C7069AEA30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9BE94CF26F000A4004629F3 /* Build configuration list for PBXNativeTarget "TaskAuth" */;
 			buildPhases = (
+				EA1D1B0406481EF912BBC9A6 /* [CP] Check Pods Manifest.lock */,
 				D9BE94B726F000A3004629F3 /* Sources */,
 				D9BE94B826F000A3004629F3 /* Frameworks */,
 				D9BE94B926F000A3004629F3 /* Resources */,
+				A33384C49BEA0C68DDDF8CFD /* [CP] Embed Pods Frameworks */,
+				74005F42A1D0A43281B09241 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +293,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74005F42A1D0A43281B09241 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33384C49BEA0C68DDDF8CFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskAuth/Pods-TaskAuth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA1D1B0406481EF912BBC9A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskAuth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9BE94B726F000A3004629F3 /* Sources */ = {
@@ -435,6 +522,7 @@
 		};
 		D9BE94D026F000A4004629F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B0A8F3A0EEA7C736D49675D /* Pods-TaskAuth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +542,7 @@
 		};
 		D9BE94D126F000A4004629F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C9B7B1528A1D71F8AE8C9BC /* Pods-TaskAuth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
