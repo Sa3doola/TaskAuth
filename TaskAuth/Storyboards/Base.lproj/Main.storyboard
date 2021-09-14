@@ -400,9 +400,9 @@
                                                                     <constraint firstAttribute="height" constant="30" id="jn0-IG-IWx"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc2-Ck-Dpd">
-                                                                <rect key="frame" x="16" y="48" width="47.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nc2-Ck-Dpd">
+                                                                <rect key="frame" x="16" y="38" width="49" height="18"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -418,7 +418,7 @@
                                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="glW-LC-sPe" secondAttribute="trailing" constant="20" symbolic="YES" id="2sQ-ua-BCj"/>
                                                             <constraint firstItem="eaA-YV-LPi" firstAttribute="centerY" secondItem="4eB-Bt-svI" secondAttribute="centerY" id="4qh-FU-qaC"/>
                                                             <constraint firstItem="eaA-YV-LPi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nc2-Ck-Dpd" secondAttribute="trailing" constant="8" symbolic="YES" id="DWQ-mu-fT8"/>
-                                                            <constraint firstItem="Nc2-Ck-Dpd" firstAttribute="top" secondItem="glW-LC-sPe" secondAttribute="bottom" constant="20" id="DqK-mF-BYj"/>
+                                                            <constraint firstItem="Nc2-Ck-Dpd" firstAttribute="top" secondItem="glW-LC-sPe" secondAttribute="bottom" constant="10" id="DqK-mF-BYj"/>
                                                             <constraint firstItem="glW-LC-sPe" firstAttribute="leading" secondItem="4eB-Bt-svI" secondAttribute="leading" constant="16" id="EVk-QZ-4eH"/>
                                                             <constraint firstAttribute="trailing" secondItem="eaA-YV-LPi" secondAttribute="trailing" constant="15" id="I5D-pp-O6X"/>
                                                             <constraint firstItem="QSj-sK-AaH" firstAttribute="top" secondItem="4eB-Bt-svI" secondAttribute="top" id="Mqy-gm-NNo"/>
