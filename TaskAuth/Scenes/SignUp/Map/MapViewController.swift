@@ -72,6 +72,7 @@ extension MapViewController: CLLocationManagerDelegate, GMSMapViewDelegate {
                                               zoom: 14.0)
         self.mapView.camera = camera
         self.mapView.settings.myLocationButton = true
+        self.mapView.isMyLocationEnabled = true
         marker.map = self.mapView
         marker.title = ""
         marker.icon = #imageLiteral(resourceName: "Marker")
