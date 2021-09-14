@@ -7,9 +7,8 @@
 
 import UIKit
 
-
 protocol LoginRouter {
-  
+    func goToSignUp()
 }
 
 class LoginRouterImplementation: LoginRouter {
@@ -19,5 +18,11 @@ class LoginRouterImplementation: LoginRouter {
         self.LoginViewController = LoginViewController
     }
     
+    let authStoryboard = Storyboard.authStoryboard
+    
+    func goToSignUp() {
+        let vc: SignUpViewController = authStoryboard.instantiateViewController()
+        self.LoginViewController?.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

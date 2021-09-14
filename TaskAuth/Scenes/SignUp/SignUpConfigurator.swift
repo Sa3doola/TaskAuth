@@ -14,7 +14,7 @@ protocol SignUpConfigurator {
 
 
 class SignUpConfiguratorImplementation {
-
+    
     func configure(SignUpViewController:SignUpViewController) {
         let view = SignUpViewController
         let router = SignUpRouterImplementation(SignUpViewController: view)

@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D909410726F01789000D060F /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909410626F01789000D060F /* UserRequest.swift */; };
+		D909410A26F017BD000D060F /* URLRequestBulider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909410926F017BD000D060F /* URLRequestBulider.swift */; };
+		D909410D26F017E8000D060F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909410C26F017E8000D060F /* LoginModel.swift */; };
+		D909411026F017EC000D060F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909410F26F017EC000D060F /* RegisterModel.swift */; };
+		D909411326F017EF000D060F /* UserActivationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909411226F017EF000D060F /* UserActivationModel.swift */; };
+		D909411626F017F2000D060F /* ProviderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909411526F017F2000D060F /* ProviderDataModel.swift */; };
 		D9BE94BF26F000A4004629F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE94BE26F000A4004629F3 /* AppDelegate.swift */; };
 		D9BE94C126F000A4004629F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE94C026F000A4004629F3 /* SceneDelegate.swift */; };
 		D9BE94C626F000A4004629F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9BE94C426F000A4004629F3 /* Main.storyboard */; };
@@ -38,6 +44,12 @@
 		693D2736EAD8DE0477A7A190 /* Pods_TaskAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0A8F3A0EEA7C736D49675D /* Pods-TaskAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskAuth.debug.xcconfig"; path = "Target Support Files/Pods-TaskAuth/Pods-TaskAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		6C9B7B1528A1D71F8AE8C9BC /* Pods-TaskAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskAuth.release.xcconfig"; path = "Target Support Files/Pods-TaskAuth/Pods-TaskAuth.release.xcconfig"; sourceTree = "<group>"; };
+		D909410626F01789000D060F /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		D909410926F017BD000D060F /* URLRequestBulider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBulider.swift; sourceTree = "<group>"; };
+		D909410C26F017E8000D060F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D909410F26F017EC000D060F /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		D909411226F017EF000D060F /* UserActivationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActivationModel.swift; sourceTree = "<group>"; };
+		D909411526F017F2000D060F /* ProviderDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderDataModel.swift; sourceTree = "<group>"; };
 		D9BE94BB26F000A4004629F3 /* TaskAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BE94BE26F000A4004629F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9BE94C026F000A4004629F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +104,6 @@
 				6B0A8F3A0EEA7C736D49675D /* Pods-TaskAuth.debug.xcconfig */,
 				6C9B7B1528A1D71F8AE8C9BC /* Pods-TaskAuth.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,6 +226,8 @@
 		D9BE951026F0032F004629F3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D909410626F01789000D060F /* UserRequest.swift */,
+				D909410926F017BD000D060F /* URLRequestBulider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -222,6 +235,10 @@
 		D9BE951126F00336004629F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D909410C26F017E8000D060F /* LoginModel.swift */,
+				D909410F26F017EC000D060F /* RegisterModel.swift */,
+				D909411226F017EF000D060F /* UserActivationModel.swift */,
+				D909411526F017F2000D060F /* ProviderDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,6 +377,8 @@
 			files = (
 				D9BE94F326F001DA004629F3 /* ActivationPresenter.swift in Sources */,
 				D9BE94EA26F001CE004629F3 /* SignUpViewController.swift in Sources */,
+				D909411326F017EF000D060F /* UserActivationModel.swift in Sources */,
+				D909410726F01789000D060F /* UserRequest.swift in Sources */,
 				D9BE94E926F001CE004629F3 /* SignUpRouter.swift in Sources */,
 				D9BE94E826F001CE004629F3 /* SignUpPresenter.swift in Sources */,
 				D9BE94DD26F001B0004629F3 /* LoginViewController.swift in Sources */,
@@ -369,8 +388,12 @@
 				D9BE94F426F001DA004629F3 /* ActivationRouter.swift in Sources */,
 				D9BE94DE26F001B0004629F3 /* LoginInteractor.swift in Sources */,
 				D9BE94F526F001DA004629F3 /* ActivationViewController.swift in Sources */,
+				D909411626F017F2000D060F /* ProviderDataModel.swift in Sources */,
 				D9BE94F626F001DA004629F3 /* ActivationInteractor.swift in Sources */,
+				D909410D26F017E8000D060F /* LoginModel.swift in Sources */,
+				D909410A26F017BD000D060F /* URLRequestBulider.swift in Sources */,
 				D9BE94BF26F000A4004629F3 /* AppDelegate.swift in Sources */,
+				D909411026F017EC000D060F /* RegisterModel.swift in Sources */,
 				D9BE94DC26F001B0004629F3 /* LoginRouter.swift in Sources */,
 				D9BE950826F00311004629F3 /* Validation.swift in Sources */,
 				D9BE950426F00258004629F3 /* MapViewController.swift in Sources */,

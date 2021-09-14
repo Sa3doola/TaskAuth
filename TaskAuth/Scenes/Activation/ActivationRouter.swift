@@ -7,9 +7,8 @@
 
 import UIKit
 
-
 protocol ActivationRouter {
-  
+    func goToLogin()
 }
 
 class ActivationRouterImplementation: ActivationRouter {
@@ -19,5 +18,11 @@ class ActivationRouterImplementation: ActivationRouter {
         self.ActivationViewController = ActivationViewController
     }
     
+    let storyboard = Storyboard.authStoryboard
+    
+    func goToLogin() {
+        let vc: LoginViewController = storyboard.instantiateViewController()
+        self.ActivationViewController?.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

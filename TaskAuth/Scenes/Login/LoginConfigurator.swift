@@ -7,14 +7,12 @@
 
 import Foundation
 
-
 protocol LoginConfigurator {
     func configure(LoginViewController:LoginViewController)
 }
 
-
 class LoginConfiguratorImplementation {
-
+    
     func configure(LoginViewController:LoginViewController) {
         let view = LoginViewController
         let router = LoginRouterImplementation(LoginViewController: view)
