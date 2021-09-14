@@ -107,6 +107,8 @@ extension SignUpViewController: UITextFieldDelegate {
 
 extension SignUpViewController: SignUpView, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    // MARK: - SignUPView
+    
     func showAlert(_ message: String) {
         let alert = UIAlertController(title: "Please Try Again",
                                       message: message,
@@ -131,6 +133,8 @@ extension SignUpViewController: SignUpView, UIPickerViewDelegate, UIPickerViewDa
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - UIPickerViewDelegate and DataSource
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

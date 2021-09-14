@@ -17,6 +17,7 @@ protocol LoginPresenter {
 }
 
 class LoginPresenterImplementation: LoginPresenter {
+    
     fileprivate weak var view: LoginView?
     internal let router: LoginRouter
     internal let interactor : LoginInteractor
@@ -41,10 +42,21 @@ class LoginPresenterImplementation: LoginPresenter {
     
     func logInRequest(phone: String, password: String) {
         interactor.logIn(phone: phone, password: password, userType: "client", deviceId: "123654123654",
-                         deviceType: "ios", uuid: NSUUID().uuidString) { (result) in
+                         deviceType: "ios", uuid: NSUUID().uuidString) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let model):
-                print("Done: \(model)")
+                do {
+                    let resultModel = try ValidateService.validate(model: model)
+                    print(resultModel)
+                } catch {
+                    if error.localizedDescription == "Need To Active" {
+                        self.view?.showAlert(error.localizedDescription)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            self.router.goToActivation(phone: phone)
+                        }
+                    }
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

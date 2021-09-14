@@ -25,7 +25,6 @@ protocol SignUpPresenter {
 
 class SignUpPresenterImplementation: SignUpPresenter {
     
-    
     fileprivate weak var view: SignUpView?
     internal let router: SignUpRouter
     internal let interactor : SignUpInteractor
@@ -92,7 +91,13 @@ class SignUpPresenterImplementation: SignUpPresenter {
             guard let self = self else { return }
             switch result {
             case .success(let model):
-                print("SignUpDone: \(model)")
+                do {
+                    let resultModel = try ValidateService.validate(model: model)
+                    print(resultModel)
+                    self.router.goToActivation(phone: phone)
+                } catch {
+                    self.view?.showAlert(model.msg!)
+                }
                 self.router.goToActivation(phone: phone)
             case .failure(let error):
                 print(error.localizedDescription)

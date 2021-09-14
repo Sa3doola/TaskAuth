@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - Storyboard
+
 enum Storyboard: String {
     case main = "Main"
     
@@ -19,4 +21,10 @@ extension UIStoryboard {
     func instantiateViewController<T>(withIdentifier identifier: String = String(describing: T.self)) -> T {
         return instantiateViewController(withIdentifier: identifier) as! T
     }
+}
+
+// MARK: - UserDefaults
+
+extension UserDefaults {
+    
 }

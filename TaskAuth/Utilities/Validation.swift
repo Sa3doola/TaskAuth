@@ -9,6 +9,23 @@ import Foundation
 
 struct ValidateService {
     
+    static func validate(model: LoginModel?) throws ->  LoginModel {
+        guard let safeModel = model, safeModel.key != "fail" else {
+            throw ValidationErrors.failedToLogin
+        }
+        guard safeModel.key != "needActive" else {
+            throw ValidationErrors.needActive
+        }
+        return safeModel
+    }
+    
+    static func validate(model: RegisterModel?) throws -> RegisterModel {
+        guard let safeModel = model, safeModel.key != "fail" else {
+            throw ValidationErrors.failedToLogin
+        }
+        return safeModel
+    }
+    
     static func validate(name: String?) throws -> String {
         guard let name = name, !name.isEmpty else {
             throw ValidationErrors.emptyName
@@ -86,6 +103,8 @@ enum ValidationErrors: Error {
     case shortPassword
     case emptyConfrimPassword
     case confrimPassword
+    case failedToLogin
+    case needActive
 }
 
 extension ValidationErrors: LocalizedError {
@@ -113,6 +132,10 @@ extension ValidationErrors: LocalizedError {
             return "Please enter your confrim Password".localizedCapitalized
         case .confrimPassword:
             return "Password Not match Confrim Password".localizedCapitalized
+        case .failedToLogin:
+            return "Failed To Login".localizedCapitalized
+        case .needActive:
+            return "Need To Active".localizedCapitalized
         }
     }
 }
